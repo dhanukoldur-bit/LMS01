@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-f1-red: #E10600;
+  --color-f1-dark-blue: #15151E;
+  --color-f1-gray: #F3F3F3;
+  --color-f1-border: #D0D0D2;
+
+  --animate-spin-slow: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-f1-gray text-f1-dark-blue font-sans antialiased;
+  }
+}
+
+.parallelogram-btn {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
